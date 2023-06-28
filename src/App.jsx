@@ -1,4 +1,12 @@
+import { useTour } from "@reactour/tour";
+import { useEffect } from "react";
+
 function App() {
+  const { setIsOpen } = useTour();
+
+  useEffect(() => {
+    setIsOpen(true);
+  }, []);
   return (
     <>
       <section id="hero">
@@ -13,7 +21,7 @@ function App() {
           </p>
 
           {/* <!-- Button Container --> */}
-          <div class="button-container">
+          <div class="button-container first-step">
             <a
               href="#"
               class="rounded-full bg-strongCyan p-4 px-8 shadow-lg duration-200 hover:opacity-80"
@@ -29,7 +37,6 @@ function App() {
           </div>
         </div>
       </section>
-
       {/* <!-- Snippets Section --> */}
       <section id="snippets">
         <div class="section-container my-20">
@@ -41,7 +48,6 @@ function App() {
           </p>
         </div>
       </section>
-
       {/* <!-- Features Section --> */}
       <section id="features">
         <div class="section-container my-20">
@@ -56,7 +62,7 @@ function App() {
             </div>
 
             {/* <!-- Items Container --> */}
-            <div class="mb-24 mt-16 flex flex-col space-y-12 text-xl md:mb-60 md:w-1/2 md:pl-16 md:text-left">
+            <div class="second-step mb-24 mt-16 flex flex-col space-y-12 text-xl md:mb-60 md:w-1/2 md:pl-16 md:text-left">
               {/* <!-- Item 1 --> */}
               <div>
                 <h5>Quick Search</h5>
@@ -84,7 +90,6 @@ function App() {
           </div>
         </div>
       </section>
-
       {/* <!-- Access Anywhere Section --> */}
       <section id="access">
         <div class="section-container my-20">
@@ -97,7 +102,6 @@ function App() {
           <img src="images/image-devices.png" alt="" class="mx-auto" />
         </div>
       </section>
-
       {/* <!-- Supercharge Section --> */}
       <section id="supercharge">
         <div class="section-container my-20">
@@ -106,7 +110,7 @@ function App() {
             We've got the tools to boost your productivity.
           </p>
           {/* <!-- Items Container --> */}
-          <div class="flex flex-col items-center justify-between space-y-16 md:flex-row md:space-x-12 md:space-y-0">
+          <div class="third-step flex flex-col items-center justify-between space-y-16 md:flex-row md:space-x-12 md:space-y-0">
             {/* <!-- Item 1 --> */}
             <div class="flex flex-col items-center space-y-5">
               <img src="images/icon-blacklist.svg" alt="" class="mb-6" />
@@ -138,7 +142,6 @@ function App() {
           </div>
         </div>
       </section>
-
       {/* <!-- References Section --> */}
       <section id="references">
         <div class="mx-auto my-44 flex max-w-6xl flex-col items-center justify-between space-y-16 px-10 md:flex-row md:space-y-0">
@@ -149,7 +152,6 @@ function App() {
           <img src="images/logo-vector-graphics.png" alt="" />
         </div>
       </section>
-
       {/* <!-- Bottom CTA Section --> */}
       <section id="bottom">
         <div class="section-container my-20">
@@ -160,7 +162,7 @@ function App() {
           </p>
 
           {/* <!-- Button Container --> */}
-          <div class="button-container">
+          <div class="button-container fourth-step">
             <a
               href="#"
               class="rounded-full bg-strongCyan p-4 px-8 shadow-lg duration-200 hover:opacity-80"
@@ -176,7 +178,6 @@ function App() {
           </div>
         </div>
       </section>
-
       <footer class="bg-gray-50">
         <div class="section-container">
           <div class="flex flex-col items-center justify-between md:flex-row">
